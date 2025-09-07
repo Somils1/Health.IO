@@ -1,0 +1,14 @@
+<section class="result">
+  <h2>Analysis Result</h2>
+  <p><strong>Symptoms:</strong> <%= symptoms %></p>
+
+  <h3>Possible Conditions:</h3>
+  <ul>
+    <% predictionList.forEach(function(item) { %>
+      <li><%= item %></li>
+    <% }); %>
+  </ul>
+
+  <a href="/analyze" class="btn">Analyze Again</a>
+  <a href="/history" class="btn">View History</a>
+</section>

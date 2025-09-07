@@ -1,0 +1,17 @@
+<section>
+  <h2>Past Analyses</h2>
+
+  <% if (history.length === 0) { %>
+    <p>No history found.</p>
+  <% } else { %>
+    <ul>
+      <% history.forEach(item => { %>
+        <li>
+          <strong>Symptoms:</strong> <%= item.symptoms %><br>
+          <strong>Prediction:</strong> <%= item.prediction %><br>
+          <small><%= item.createdAt.toLocaleString() %></small>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+</section>
