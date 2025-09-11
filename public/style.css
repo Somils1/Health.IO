@@ -293,3 +293,8 @@ form button:hover {
 .feature-card p {
   color: #555;
 }
+
+.btn{
+    transform: translateY(-2px);
+  background: linear-gradient(90deg,#2c3e50,#2d8cf0);
+}
