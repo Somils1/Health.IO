@@ -1,15 +1,16 @@
 const express = require("express");
 const { getPrediction } = require("../services/huggingfaceService");
 const History = require("../models/History");
+const ensureAuth = require("../middlewares/authmiddleware");
 const router = express.Router();
 
 // Analyze form
-router.get("/analyze", (req, res) => {
+router.get("/analyze", ensureAuth,(req, res) => {
   res.render("analyze");
 });
 
 // Analyze submit
-router.post("/analyze", async (req, res) => {
+router.post("/analyze", ensureAuth ,async (req, res) => {
   const { symptoms } = req.body;
   let prediction = await getPrediction(symptoms);
 
