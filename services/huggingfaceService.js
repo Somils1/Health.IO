@@ -10,7 +10,7 @@ async function getPrediction(symptoms) {
         messages: [
           {
             role: "system",
-            content: "You are a helpful medical assistant. Based only on symptoms, suggest possible health conditions. Keep it short and factual."
+            content: "You are a helpful medical assistant. Based only on symptoms, suggest possible health conditions. Keep it short and factual. check the answer based on confidence level if you are 60% confident then only give the answer else return suggest doctor asap"
           },
           {
             role: "user",
